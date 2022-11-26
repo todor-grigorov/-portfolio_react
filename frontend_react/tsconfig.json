@@ -31,6 +31,7 @@
     // "checkJs": true /* Report errors in .js files. Works in tandem with allowJs. */,
   },
   "include": [
-    "frontend_react/src/**/*"
-  ]
+    "frontend_react/src/**/*", "./src/**/*.tsx", "./src/**/*.ts"
+  ],
+  "exclude": ["dist", "build", "node_modules"]
 }
