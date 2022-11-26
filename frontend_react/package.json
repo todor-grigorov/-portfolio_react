@@ -14,8 +14,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@sanity/client": "^3.4.1",
+    "@sanity/image-url": "^1.0.1",
+    "framer-motion": "^7.6.12",
+    "node-sass": "^8.0.0",
     "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "react-dom": "^18.1.0",
+    "react-icons": "^4.6.0"
   },
   "devDependencies": {
     "@babel/core": "^7.17.10",
