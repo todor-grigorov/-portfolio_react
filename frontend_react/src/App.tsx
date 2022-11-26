@@ -4,18 +4,15 @@ import './App.scss';
 
 const App = () => {
   return (
-    <>
-      <h1>React Typescript Webpack Portfolio</h1>
-      <div className="app">
-        <Navbar />
-        <Header />
-        <About />
-        <Work />
-        <Skills />
-        <Testimonial />
-        <Footer />
-      </div>
-    </>
+    <div className="app">
+      <Navbar />
+      <Header />
+      <About />
+      <Work />
+      <Skills />
+      <Testimonial />
+      <Footer />
+    </div>
   );
 };
 
