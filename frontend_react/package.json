@@ -21,7 +21,8 @@
     "node-sass": "^8.0.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
-    "react-icons": "^4.6.0"
+    "react-icons": "^4.6.0",
+    "react-tooltip": "^4.5.1"
   },
   "devDependencies": {
     "@babel/core": "^7.17.10",

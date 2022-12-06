@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { AiFillEye, AiFillGithub } from 'react-icons/ai';
 import { motion } from 'framer-motion';
 import { AppWrap } from '../../wrapper';
-import { urlFor, client } from '../../client';
+import { client, urlFor } from '../../client';
 import './Work.scss';
+import MotionWrap from '../../wrapper/MotionWrap';
 
 export interface WorkDataProps {
   title: string;
@@ -130,4 +131,8 @@ const Work = () => {
   );
 };
 
-export default AppWrap(Work, 'work');
+export default AppWrap(
+  MotionWrap(Work, 'app__works'),
+  'work',
+  'app__primarybg'
+);
