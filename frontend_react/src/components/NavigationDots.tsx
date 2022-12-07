@@ -7,7 +7,7 @@ export interface ParentProps {
 const NavigationDots = ({ active }: ParentProps) => {
   return (
     <div className={'app__navigation'}>
-      {['home', 'about', 'testimonials', 'work', 'skills', 'contact'].map(
+      {['home', 'about', 'work', 'skills', 'testimonial', 'contact'].map(
         (item, index) => (
           <a
             href={`#${item}`}
