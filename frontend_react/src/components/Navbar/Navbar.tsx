@@ -33,7 +33,7 @@ const Navbar = () => {
               {[
                 'home',
                 'about',
-                'testimonials',
+                'testimonial',
                 'work',
                 'skills',
                 'contact',
