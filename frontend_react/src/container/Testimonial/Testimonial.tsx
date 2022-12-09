@@ -16,6 +16,7 @@ export interface Brand {
   _id: string;
   name: string;
   imgUrl: string;
+  brandUrl: string;
 }
 
 const Testimonial = () => {
@@ -106,7 +107,9 @@ const Testimonial = () => {
             transition={{ duration: 0.5, type: 'tween' }}
             key={brand._id}
           >
-            <img src={urlFor(brand.imgUrl).url()} alt={brand.name} />
+            <a href={brand.brandUrl} target="_blank" rel="noopener noreferrer">
+              <img src={urlFor(brand.imgUrl).url()} alt={brand.name} />
+            </a>
           </motion.div>
         ))}
       </div>
