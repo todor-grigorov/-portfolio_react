@@ -51,15 +51,15 @@ const Footer = () => {
       <div className="app__footer-cards">
         <div className="app__footer-card">
           <img src={images.email} alt="email" />
-          <a href="mailto:test@mail.com" className={'p-text'}>
-            test@mail.com
+          <a href={`mailto:${process.env.MY_EMAIL}`} className={'p-text'}>
+            {process.env.MY_EMAIL}
           </a>
         </div>
 
         <div className="app__footer-card">
           <img src={images.mobile} alt="mobile" />
-          <a href="tel:+41 12 345 67 89" className={'p-text'}>
-            +41 12 345 67 89
+          <a href={`tel:${process.env.MY_PHONE}`} className={'p-text'}>
+            {process.env.MY_PHONE}
           </a>
         </div>
       </div>
