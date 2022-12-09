@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import ReactTooltip from 'react-tooltip';
 import { motion } from 'framer-motion';
 import { AppWrap } from '../../wrapper';
 import { client, urlFor } from '../../client';
-import './Skills.scss';
 import MotionWrap from '../../wrapper/MotionWrap';
+import ReactTooltip from 'react-tooltip';
+import './Skills.scss';
 
 export interface Skill {
   name: string;
@@ -75,15 +75,14 @@ const Skills = () => {
                 <p className="bold-text">{exp.year}</p>
               </div>
               <motion.div className={'app__skills-exp-works'}>
-                {exp.works.map((work) => (
-                  <>
+                {exp.works.map((work, index) => (
+                  <React.Fragment key={work.company + index}>
                     <motion.div
                       whileInView={{ opacity: [0, 1] }}
                       transition={{ duration: 0.5 }}
                       className={'app__skills-exp-work app__flex'}
                       data-tip
                       data-for={work.name}
-                      key={work.name + work.company}
                     >
                       <h4 className="bold-text">{work.name}</h4>
                       <p className="p-text">{work.company}</p>
@@ -96,7 +95,7 @@ const Skills = () => {
                     >
                       {work.desc}
                     </ReactTooltip>
-                  </>
+                  </React.Fragment>
                 ))}
               </motion.div>
             </motion.div>
