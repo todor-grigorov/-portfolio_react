@@ -36,6 +36,7 @@ import nb from '../assets/nb.png';
 import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
 import c_sharp from '../assets/c_sharp.svg';
+import dot_net_core from '../assets/asp-net-core-logo-nobackground.png';
 
 export default {
   email,
@@ -73,4 +74,5 @@ export default {
   skype,
   spotify,
   c_sharp,
+  dot_net_core,
 };
