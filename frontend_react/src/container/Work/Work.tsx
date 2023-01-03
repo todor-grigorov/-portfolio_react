@@ -50,24 +50,32 @@ const Work = () => {
         My creative <span>Portfolio</span> section
       </h2>
       <div className="app__work-filter">
-        {['UI/UX', 'Web App', 'Mobile App', 'React JS', 'All'].map(
-          (item, index) => (
-            <div
-              key={index}
-              role={'button'}
-              tabIndex={0}
-              onClick={() => handleWorkFilter(item)}
-              onKeyDown={() => {
-                console.log('Key pressed');
-              }}
-              className={`app__work-filter-item app__flex p-text ${
-                activeFilter === item ? 'item-active' : ''
-              }`}
-            >
-              {item}
-            </div>
-          )
-        )}
+        {[
+          'UI/UX',
+          'Web App',
+          'Mobile App',
+          'React JS',
+          'Angular',
+          'Redux',
+          'MaterialUI',
+          'Dashboard',
+          'All',
+        ].map((item, index) => (
+          <div
+            key={index}
+            role={'button'}
+            tabIndex={0}
+            onClick={() => handleWorkFilter(item)}
+            onKeyDown={() => {
+              console.log('Key pressed');
+            }}
+            className={`app__work-filter-item app__flex p-text ${
+              activeFilter === item ? 'item-active' : ''
+            }`}
+          >
+            {item}
+          </div>
+        ))}
       </div>
 
       <motion.div
