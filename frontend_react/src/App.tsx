@@ -1,18 +1,18 @@
-import { About, Footer, Header, Skills, Testimonial, Work } from './container';
-import { Navbar } from './components';
+import { useState } from 'react';
 import './App.scss';
+import { GlobalContext } from './context/GlobalContext';
+import LoadingScreen from './components/LoadingScreen/LoadingScreen';
+import AppLanding from './container/AppLanding';
 
 const App = () => {
+  const [appLoading, setAppLoading] = useState(true);
   return (
-    <div className="app">
-      <Navbar />
-      <Header />
-      <About />
-      <Work />
-      <Skills />
-      <Testimonial />
-      <Footer />
-    </div>
+    <GlobalContext.Provider value={{ appLoading, setAppLoading }}>
+      <div className="app">
+        {appLoading ? <LoadingScreen /> : null}
+        <AppLanding isLoading={appLoading} />
+      </div>
+    </GlobalContext.Provider>
   );
 };
 

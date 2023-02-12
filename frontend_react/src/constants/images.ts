@@ -24,7 +24,7 @@ import about03 from '../assets/about03.png';
 import about04 from '../assets/about04.png';
 
 // import profile from '../assets/profile.png';
-import profile from '../assets/profile-removebg.png';
+import profile from '../assets/profile-removebg_1.png';
 import circle from '../assets/circle.svg';
 import logoTest from '../assets/logo-test.png';
 import logo from '../assets/logo.png';
@@ -38,6 +38,7 @@ import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
 import c_sharp from '../assets/c_sharp.svg';
 import dot_net_core from '../assets/asp-net-core-logo-nobackground.png';
+import loading from '../assets/loading.gif';
 
 export default {
   email,
@@ -76,4 +77,5 @@ export default {
   spotify,
   c_sharp,
   dot_net_core,
+  loading,
 };

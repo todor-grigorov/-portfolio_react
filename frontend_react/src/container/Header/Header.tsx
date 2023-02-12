@@ -1,8 +1,10 @@
+import { useContext, useRef } from 'react';
 import { AppWrap } from '../../wrapper/index';
 import { motion } from 'framer-motion';
-import './Header.scss';
 
+import './Header.scss';
 import { images } from '../../constants';
+import { GlobalContext } from '../../context/GlobalContext';
 
 const scaleVariants = {
   whileInView: {
@@ -16,6 +18,27 @@ const scaleVariants = {
 };
 
 const Header = () => {
+  const context = useContext(GlobalContext);
+  const profilePicRef = useRef<HTMLImageElement | null>(null);
+
+  // useEffect(() => {
+  //   // if (!profilePicRef.current) return;
+  //
+  //   const isLoading =
+  //     profilePicRef.current?.complete &&
+  //     profilePicRef.current?.naturalHeight !== 0;
+  //
+  //   console.log(isLoading);
+  //   return () => {
+  //     profilePicRef.current = null;
+  //   };
+  // }, [profilePicRef]);
+
+  const onLoadProfilePic = () => {
+    console.log('profile image loaded');
+    if (!context) return;
+    context.setAppLoading(false);
+  };
   return (
     <div className="app__header app__flex">
       <motion.div
@@ -44,7 +67,12 @@ const Header = () => {
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className={'app__header-img'}
       >
-        <img src={images.profile} alt="profile_bg" />
+        <img
+          src={images.profile}
+          alt="profile_bg"
+          ref={profilePicRef}
+          onLoad={onLoadProfilePic}
+        />
         <motion.img
           whileInView={{ scale: [0, 1] }}
           transition={{ duration: 1, ease: 'easeInOut' }}
